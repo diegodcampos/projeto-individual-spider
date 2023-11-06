@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Spider-Man</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js"></script>
+    <link rel="shortcut icon" href="../img site/milesIcon.png">
+</head>
+
+<body>
+
+    <header>
+        <ul class="ul-header">
+            <div class="div-logo"><img src="../img site/peterIcon.png " width="135px"></div>
+            <li><button onclick="scrollToSection1('inicioSection')"><b>Início</b></button></li>
+            <li><button onclick="scrollToSection2('heroisSection')"><b>Heróis</b></button></li>
+            <li><button onclick="scrollToSection3('valoresSection')"><b>Valores</b></button></li>
+            <li><button onclick="Acesso()"><b>Acessar</b></button></li>
+        </ul>
+    </header>
+
+    <section id="inicioSection" class="section1">
+
+        <div class="slogan">
+            <p><b>Os melhores amigos <br> da vizinhança.</b></p>
+        </div>
+
+        <div class="jogar">
+            <div class="btnVamosJogar">
+                <button onclick="hiJogar()"><b>Vamos Jogar?</b></button>
+            </div>
+            <img src="../img site/hiPeter.png">
+        </div>
+
+    </section>
+
+    <section id="heroisSection" class="section2">
+
+        <div class="sobre">
+            <h1><b>Sobre os heróis</b></h1>
+        </div>
+
+        <div id="infoSpiders" class="herois">
+            <div id="divPeter" class="peter"><img src="../img site/imgPeter.png" width="280px"><br>
+                <button id="botaoPeter" onclick="infoPeter()"><b>Peter</b></button>
+            </div>
+
+            <div id="textoMiles" class="exibirMiles"></div>
+
+            <div id="divMiles" class="miles"><img src="../img site/imgMiles.png" width="280px"><br>
+                <button id="botaoMiles" onclick="infoMiles()"><b>Miles</b></button>
+            </div>
+
+            <div id="textoPeter" class="exibirPeter"></div>
+
+        </div>
+
+    </section>
+
+    <section id="valoresSection" class="section3">
+
+        <div class="h1Valores">
+            <h1><b><span style="color: #a71814;">Spider</span>-Valores</b></h1>
+        </div>
+
+        <div class="valores">
+            <div class="empatia"><img src="../img site/empatia.png" width="220px"><br>
+                <p><b>Empatia</b></p>
+            </div>
+
+            <div class="responsabilidade"><img src="../img site/responsabilidade.png" width="220px"><br>
+                <p><b>Reponsabilidade</b></p>
+            </div>
+
+            <div class="solidariedade"><img src="../img site/solidariedade.png" width="220px"><br>
+                <p><b>Solidariedade</b></p>
+            </div>
+
+        </div>
+
+    </section>
+
+    <footer class="footer">
+
+        <ul class="ul-footer">
+            <li class="liFooter">
+                <p style="color: white;">"Com grandes poderes vêm grandes responsabilidades." <br>
+                    Projeto individual realizado por Diego de Campos Arruda.</p>
+            </li>
+            <li class="liFooter"><img src="../img site/milesIcon.png" width="80px"></li>
+        </ul>
+
+    </footer>
+
+</body>
+
+</html>
