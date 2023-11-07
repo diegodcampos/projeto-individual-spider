@@ -48,6 +48,11 @@ function infoMiles() {
     das habilidades clássicas do Homem-Aranha, como a capacidade de escalar paredes 
     e a agilidade sobre-humana. No entanto, ele também possui poderes únicos, como 
     a capacidade de dar um "choque venenoso" e camuflagem.</p>`
+
+    const textoPeter = document.querySelector("textoPeter");
+
+    textoPeter.classList.add("mostrar");
+
 }
 
 function scrollToSection1(inicioSection) {
