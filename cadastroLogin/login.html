@@ -4,8 +4,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
-    <script src="script.js"></script>
+    <link rel="stylesheet" href="login.css">
+    <script src="login.js"></script>
     <link rel="shortcut icon" href="../img site/milesIcon.png">
     <title>Login</title>
 </head>
@@ -14,7 +14,7 @@
     <header>
         <ul>
             <div><img src="../img site/peterIcon.png " width="130px"></div>
-            <li><button onclick="scrollToSection1('inicioSection')"><b>Início</b></button></li>
+            <li><a href="../landingPage/index.html"><b>Início</b></a></li>
         </ul>
     </header>
 
@@ -22,7 +22,7 @@
         <div class="loginEsquerdo">
             <h1 style="color: white;">Com grandes acessos <br>
                 vêm <span style="color: #d3231d;">grandes responsabilidades</span>.</h1>
-                <img src="../img site/peterLogin3.gif" width="220px">
+                <img src="../img site/peterLogin.gif" width="220px">
         </div>
         <div class="loginDireito">
             <div class="campoLogin">
@@ -34,6 +34,9 @@
                 <div class="campoTexto">
                     <label for="senha">Senha</label>
                     <input type="password" id="senha" placeholder="Senha">
+                </div>
+                <div class="campoTexto">
+                    <a style="color: blue;" href="../cadastroLogin/cadastro.html">Cadastrar Já!</a>
                 </div>
                 <button onclick="fazerLogin()" class="btn-login"><b>Entrar</b></button>
             </div>

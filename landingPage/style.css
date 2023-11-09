@@ -52,7 +52,8 @@ li {
     margin-top: 35px;
 }
 
-header button {
+header a {
+    text-decoration: none;
     font-family: 'Raleway', sans-serif;
     color: #D9E2E7;
     border: none;
@@ -70,9 +71,13 @@ header button {
     transition: ease-out 1.5s;
 }
 
-header button:hover {
+header a:hover {
     color: #D9E2E7;
     box-shadow: inset 400px 0 0 0 #a71814;
+}
+
+hr {
+    border-color: transparent;
 }
 
 .section1 {
@@ -113,6 +118,11 @@ header button:hover {
     100% {
         transform: translateX(0);
     }
+}
+
+.scroll {
+    position: absolute;
+    margin-top: 127px;
 }
 
 .btnVamosJogar {
@@ -342,5 +352,5 @@ header button:hover {
 }
 
 .ul-footer p {
-    margin-top: 18px;
+    margin-top: 27px;
 }

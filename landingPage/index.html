@@ -10,36 +10,40 @@
     <title>Spider-Man</title>
 </head>
 
+
 <body>
 
     <header>
         <ul class="ul-header">
             <div class="div-logo"><img src="../img site/peterIcon.png " width="130px"></div>
-            <li><button onclick="scrollToSection1('inicioSection')"><b>Início</b></button></li>
-            <li><button onclick="scrollToSection2('heroisSection')"><b>Heróis</b></button></li>
-            <li><button onclick="scrollToSection3('valoresSection')"><b>Valores</b></button></li>
-            <li><button onclick="Acesso()"><b>Acessar</b></button></li>
+            <li><a href="#idSection1"><b>Início</b></a></li>
+            <li><a href="#idSection2"><b>Heróis</b></a></li>
+            <li><a href="#idSection3"><b>Valores</b></a></li>
+            <li><a href="../cadastroLogin/login.html"><b>Acessar</b></a></li>
         </ul>
     </header>
 
+    <hr id="idSection1">
     <section id="inicioSection" class="section1">
 
         <div class="slogan">
-            <p><b>Os <span style="color: #d3231d;">melhores</span> amigos <br> da vizinhança.</b></p>
-        </div>
-
-        <div class="jogar">
-            <div class="btnVamosJogar">
-                <button onclick="hiJogar()"><b>Vamos Jogar?</b></button>
-            </div>
-            <img src="../img site/hiPeter.png">
-        </div>
-
-    </section>
-
-    <section id="heroisSection" class="section2">
-
-        <div class="sobre">
+            <p><b>Os <span style="color: #d3231d;">melhores</span>
+                    amigos <br> da vizinhança.</b></p>
+                </div>
+                
+                <div class="jogar">
+                    <div class="btnVamosJogar">
+                        <button onclick="hiJogar()"><b>Vamos Jogar?</b></button>
+                    </div>
+                    <div class="scroll"><hr id="idSection2"></div>
+                    <img src="../img site/hiPeter.png">
+                </div>
+                  
+            </section>
+            
+            <section id="heroisSection" class="section2">
+                
+                <div class="sobre">
             <h1><b>Sobre os heróis</b></h1>
         </div>
 
@@ -60,6 +64,7 @@
 
     </section>
 
+    <hr id="idSection3">
     <section id="valoresSection" class="section3">
 
         <div class="h1Valores">
@@ -87,8 +92,7 @@
 
         <ul class="ul-footer">
             <li class="liFooter">
-                <p style="color: white;">"Com grandes poderes vêm grandes responsabilidades." <br>
-                    Projeto individual realizado por Diego de Campos Arruda.</p>
+                <p style="color: white;">Projeto individual realizado por Diego de Campos Arruda.</p>
             </li>
             <li class="liFooter"><img src="../img site/milesIcon.png" width="80px"></li>
         </ul>

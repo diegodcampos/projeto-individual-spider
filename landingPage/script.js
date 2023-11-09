@@ -49,27 +49,3 @@ function infoMiles() {
     e a agilidade sobre-humana. No entanto, ele também possui poderes únicos, como 
     a capacidade de dar um "choque venenoso" e camuflagem.</p>`
 }
-
-function scrollToSection1(inicioSection) {
-    const section1 = document.getElementById(inicioSection);
-
-    if (section1) {
-        section1.scrollIntoView({ behavior: 'smooth' });
-    }
-}
-
-function scrollToSection2(heroisSection) {
-    const section2 = document.getElementById(heroisSection);
-
-    if (section2) {
-        section2.scrollIntoView({ behavior: 'smooth' });
-    }
-}
-
-function scrollToSection3(valoresSection) {
-    const section3 = document.getElementById(valoresSection);
-  
-    if (section3) {
-      section3.scrollIntoView({ behavior: 'smooth' });
-    }
-  }

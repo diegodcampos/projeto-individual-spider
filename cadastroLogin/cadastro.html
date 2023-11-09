@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="cadastro.css">
+    <script src="cadastro.js"></script>
+    <link rel="shortcut icon" href="../img site/milesIcon.png">
+    <title>Cadastro</title>
+</head>
+
+<body>
+    <header>
+        <ul>
+            <div><img src="../img site/peterIcon.png " width="130px"></div>
+            <li><a href="../cadastroLogin/login.html"><b>Login</b></a></li>
+            <li><a href="../landingPage/index.html"><b>Início</b></a></li>
+        </ul>
+    </header>
+
+    <div class="cadastroPrincipal">
+        <div class="cadastroEsquerdo">
+            <h1 style="color: white;">Com grandes cadastros <br>
+                vêm <span style="color: #1b4879;">grandes responsabilidades</span>.</h1>
+                <img src="../img site/milesCadastro2.png" width="335px">
+        </div>
+        <div class="cadastroDireito">
+            <div class="campoCadastro">
+                <h1 style="color: #1b4879">Cadastro</h1>
+                <div class="campoTexto">
+                    <label for="nomeUsuario">Nome usuário</label>
+                    <input id="nomeUsuario" placeholder="Nome de usuário">
+                </div>
+                <div class="campoTexto">
+                    <label for="senha">Escolha uma senha</label>
+                    <input type="password" id="senha" placeholder="Senha">
+                </div>
+                <div class="campoTexto">
+                    <label for="confirmSenha">Confirme a senha</label>
+                    <input type="password" id="confirmSenha" placeholder="Confirme a senha">
+                </div>
+                <div class="campoTexto">
+                    <label for="heroiFav">Herói favorito</label>
+                    <select id="heroiFav">
+                        <option value="0">Escolha um herói</option>
+                        <option value="1">Peter</option>
+                        <option value="2">Miles</option>
+                    </select>
+                </div>
+                <button onclick="fazerCadastro()" class="btn-cadastro"><b>Cadastrar</b></button>
+            </div>
+        </div>
+</body>
+
+</html>
