@@ -1,0 +1,123 @@
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@600&display=swap');
+
+* {
+    margin: 0;
+}
+
+body {
+    font-family: 'Raleway', sans-serif;
+}
+
+header {
+    background-color: #0a2b4e;
+    position: relative;
+    top: 0;
+    left: 0;
+    width: 100%;
+    box-shadow: 0px 7px 10px #0a2b4e;
+}
+
+header ul {
+    display: flex;
+    justify-content: space-around;
+    list-style: none;
+}
+
+header p {
+    color: white;
+}
+
+li {
+    margin-top: 30px;
+}
+
+.feedSection {
+    display: flex;
+    width: 100%;
+}
+
+.sideNav {
+    display: flex;
+    background-color: #0a2b4e;
+    width: 11.5%;
+    height: 88.2vh;
+    box-shadow: 0px 0px 15px 7px #0a2b4e;
+    align-items: center;
+    position: relative;
+}
+
+.itensDiv {
+    height: 50%;
+}
+
+.itensDiv ul {
+    margin: -15px;
+}
+
+.sideNav a {
+    justify-content: center;
+    text-decoration: none;
+    font-family: 'Raleway', sans-serif;
+    color: #D9E2E7;
+    border: none;
+    border-radius: 50px;
+    margin: -6px;
+    padding: 6px 15px;
+    display: flex;
+    font-size: 18px;
+    letter-spacing: 0px;
+    cursor: pointer;
+    background-color: transparent;
+    box-shadow: inset 0 0 0 0 #a71814;
+    -webkit-transition: ease-out 0.3s;
+    -moz-transition: ease-out 0.3s;
+    transition: ease-out 1.5s;
+}
+
+.sideNav a:hover {
+    color: #D9E2E7;
+    box-shadow: inset 400px 0 0 0 #10000a;
+}
+
+.sideNav .feed {
+    background-color: #a71814;
+}
+
+.feedContent {
+    display: flex;
+    height: 88.2vh;
+    width: 88.5%;
+    background-image: url('../img\ site/fundoPeter.jpg');
+    background-size: 100%;
+}
+
+.feedContent img {
+    border-radius: 25px;
+    border: #a71814;
+}
+
+.tweetsEsquerda {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    width: 46%;
+    height: 85%;
+    background-color: transparent;
+    /* background-color: #a71814; */
+    margin: 50px;
+    margin-left: 110px;
+}
+
+.tweetsDireita {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    width: 48%;
+    height: 85%;
+    background: transparent;
+    /* background-color: #a71814; */
+    margin: 50px;
+    margin-left: -140px;
+}
