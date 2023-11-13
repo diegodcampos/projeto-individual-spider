@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Meu Perfil</title>
+    <link rel="stylesheet" href="peterCrimes.css">
+</head>
+
+<body>
+
+    <header>
+        <ul>
+            <div><img src="../img site/peterIcon.png " width="120px"></div>
+            <li>
+                <p>Seja bem-vindo, Peter!</p>
+            </li>
+        </ul>
+    </header>
+
+    <div class="feedSection">
+
+        <div class="sideNav">
+            <div class="itensDiv">
+                <ul>
+                    <a href="../perfilPeter/peter.html">Feed</a> <br> <br>
+                    <a class="crimes">Crimes</a> <br> <br>
+                    <a href="">Resultados</a> <br> <br> <br> <br> <br> <br> <br>
+                    <a href="">Sair</a>
+                </ul>
+            </div>
+        </div>
+
+        <div class="cadastroPrincipal">
+
+            <div class="cadastroEsquerdo">
+
+                <div class="campoCadastro">
+                    <h1 style="color: #1b4879">Cadastro</h1>
+                    <div class="campoTexto">
+                        <label for="nomeUsuario">Nome usuário</label>
+                        <input id="nomeUsuario" placeholder="Nome de usuário">
+                    </div>
+                    <div class="campoTexto">
+                        <label for="senha">Escolha uma senha</label>
+                        <input type="password" id="senha" placeholder="Senha">
+                    </div>
+                    <div class="campoTexto">
+                        <label for="confirmSenha">Confirme a senha</label>
+                        <input type="password" id="confirmSenha" placeholder="Confirme a senha">
+                    </div>
+                    <div class="campoTexto">
+                        <label for="heroiFav">Herói favorito</label>
+                        <select id="heroiFav">
+                            <option value="0">Escolha um herói</option>
+                            <option value="1">Peter</option>
+                            <option value="2">Miles</option>
+                        </select>
+                    </div>
+                    <button onclick="fazerCadastro()" class="btn-cadastro"><b>Cadastrar</b></button>
+                </div>
+            </div>
+
+            <div class="cadastroDireito">
+
+                <div class="campoCadastro">
+                    <h1 style="color: #1b4879">Cadastro</h1>
+                    <div class="campoTexto">
+                        <label for="nomeUsuario">Nome usuário</label>
+                        <input id="nomeUsuario" placeholder="Nome de usuário">
+                    </div>
+                    <div class="campoTexto">
+                        <label for="senha">Escolha uma senha</label>
+                        <input type="password" id="senha" placeholder="Senha">
+                    </div>
+                    <div class="campoTexto">
+                        <label for="confirmSenha">Confirme a senha</label>
+                        <input type="password" id="confirmSenha" placeholder="Confirme a senha">
+                    </div>
+                    <div class="campoTexto">
+                        <label for="heroiFav">Herói favorito</label>
+                        <select id="heroiFav">
+                            <option value="0">Escolha um herói</option>
+                            <option value="1">Peter</option>
+                            <option value="2">Miles</option>
+                        </select>
+                    </div>
+                    <button onclick="fazerCadastro()" class="btn-cadastro"><b>Cadastrar</b></button>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

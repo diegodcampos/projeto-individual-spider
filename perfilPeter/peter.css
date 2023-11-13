@@ -87,13 +87,15 @@ li {
     display: flex;
     height: 88.2vh;
     width: 88.5%;
-    background-image: url('../img\ site/fundoPeter.jpg');
+    background-image: url('../img\ site/fundoPeter.png');
     background-size: 100%;
 }
 
 .feedContent img {
     border-radius: 25px;
     border: #a71814;
+    border-width: 2px;
+    border-style: solid;
 }
 
 .tweetsEsquerda {
@@ -104,7 +106,6 @@ li {
     width: 46%;
     height: 85%;
     background-color: transparent;
-    /* background-color: #a71814; */
     margin: 50px;
     margin-left: 110px;
 }
@@ -117,7 +118,6 @@ li {
     width: 48%;
     height: 85%;
     background: transparent;
-    /* background-color: #a71814; */
     margin: 50px;
     margin-left: -140px;
 }

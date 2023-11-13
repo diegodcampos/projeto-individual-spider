@@ -1,0 +1,106 @@
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@600&display=swap');
+
+* {
+    margin: 0;
+}
+
+body {
+    font-family: 'Raleway', sans-serif;
+}
+
+header {
+    background-color: #0a2b4e;
+    position: relative;
+    top: 0;
+    left: 0;
+    width: 100%;
+    box-shadow: 0px 7px 10px #0a2b4e;
+}
+
+header ul {
+    display: flex;
+    justify-content: space-around;
+    list-style: none;
+}
+
+header p {
+    color: white;
+}
+
+li {
+    margin-top: 30px;
+}
+
+.feedSection {
+    display: flex;
+    width: 100%;
+}
+
+.sideNav {
+    display: flex;
+    background-color: #0a2b4e;
+    width: 11.5%;
+    height: 88.2vh;
+    box-shadow: 0px 0px 15px 7px #0a2b4e;
+    align-items: center;
+    position: relative;
+}
+
+.itensDiv {
+    height: 50%;
+}
+
+.itensDiv ul {
+    margin: -15px;
+}
+
+.sideNav a {
+    justify-content: center;
+    text-decoration: none;
+    font-family: 'Raleway', sans-serif;
+    color: #D9E2E7;
+    border: none;
+    border-radius: 50px;
+    margin: -6px;
+    padding: 6px 15px;
+    display: flex;
+    font-size: 18px;
+    letter-spacing: 0px;
+    cursor: pointer;
+    background-color: transparent;
+    box-shadow: inset 0 0 0 0 #a71814;
+    -webkit-transition: ease-out 0.3s;
+    -moz-transition: ease-out 0.3s;
+    transition: ease-out 1.5s;
+}
+
+.sideNav a:hover {
+    color: #D9E2E7;
+    box-shadow: inset 400px 0 0 0 #10000a;
+}
+
+.sideNav .crimes {
+    background-color: #a71814;
+}
+
+.cadastroPrincipal {
+    display: flex;
+    height: 88.2vh;
+    width: 88.5%;
+    background-image: url('../img\ site/fundoPeter.png');
+    background-size: 100%;
+    justify-content: center;
+    align-items: center;
+}
+
+.campoCadastro {
+    width: 60%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding: 0px 15px;
+    background: rgb(15, 0, 9, 0.7);
+    border-radius: 40px;
+    box-shadow: 0px 10px 40px rgb(15, 0, 0);
+}
