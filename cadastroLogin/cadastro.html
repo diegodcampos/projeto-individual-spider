@@ -20,26 +20,32 @@
     </header>
 
     <div class="cadastroPrincipal">
+
         <div class="cadastroEsquerdo">
             <h1 style="color: white;">Com grandes cadastros <br>
                 vêm <span style="color: #1b4879;">grandes responsabilidades</span>.</h1>
-                <img src="../img site/milesCadastro2.png" width="335px">
+            <img src="../img site/milesCadastro2.png" width="335px">
         </div>
+
         <div class="cadastroDireito">
+
             <div class="campoCadastro">
                 <h1 style="color: #1b4879">Cadastro</h1>
                 <div class="campoTexto">
-                    <label for="nomeUsuario">Nome usuário</label>
-                    <input id="nomeUsuario" placeholder="Nome de usuário">
+                    <label for="nome">Nome usuário</label>
+                    <input id="nome" placeholder="Nome de usuário">
                 </div>
+
                 <div class="campoTexto">
                     <label for="senha">Escolha uma senha</label>
                     <input type="password" id="senha" placeholder="Senha">
                 </div>
+
                 <div class="campoTexto">
                     <label for="confirmSenha">Confirme a senha</label>
                     <input type="password" id="confirmSenha" placeholder="Confirme a senha">
                 </div>
+
                 <div class="campoTexto">
                     <label for="heroiFav">Herói favorito</label>
                     <select id="heroiFav">
@@ -48,9 +54,14 @@
                         <option value="2">Miles</option>
                     </select>
                 </div>
-                <button onclick="fazerCadastro()" class="btn-cadastro"><b>Cadastrar</b></button>
+
+                <button onclick="fazerCadastro(); return true" class="btn-cadastro">
+                    <b>Cadastrar</b></button>
+
             </div>
+
         </div>
+
 </body>
 
 </html>

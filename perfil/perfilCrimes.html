@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Meu Perfil</title>
+    <link rel="stylesheet" href="perfilCrimes.css">
+    <script src="perfilCrimes.js"></script>
+    <link rel="shortcut icon" href="../img site/milesIcon.png">
+</head>
+
+<body>
+
+    <header>
+        <ul>
+            <div><img src="../img site/peterIcon.png " width="120px"></div>
+            <li>
+                <p><b>Pronto para salvar a vizinhança hoje?</b></p>
+            </li>
+        </ul>
+    </header>
+
+    <div class="feedSection">
+
+        <div class="sideNav">
+            <div class="itensDiv">
+                <ul>
+                    <a href="../perfil/perfilFeed.html">Feed</a> <br> <br>
+                    <a class="crimes">Crimes</a> <br> <br>
+                    <a href="../perfil/perfilDashboard.html">Resultados</a> <br> <br>
+                    <br> <br> <br> <br> <br>
+                    <a onclick="sairPerfil()">Sair</a> <br>
+                    <div class="sairLoading">
+                        <img id="loading" src="../img site/loading.gif">
+                    </div>
+                </ul>
+            </div>
+        </div>
+
+        <div class="cadastroPrincipal">
+
+            <div class="cadastroEsquerdo">
+
+                <div class="campoCadastro">
+                    <h1>Cadastro de Ocorrências</h1>
+                    <div class="campoTexto">
+                        <label for="tituloCrime">Título do crime</label>
+                        <input class="descricao" id="tituloCrime" 
+                        placeholder="Nomeie a ocorrência">
+                    </div>
+
+                    <div class="campoTexto">
+                        <label for="dataCrime">Data do crime</label>
+                        <input id="dataCrime" type="date">
+                    </div>
+
+                    <div class="campoTexto">
+                        <label for="spiderBot">Precisa de Spider-Bot?</label>
+                        <select id="spiderBot">
+                            <option class="nulo" value="0">Escolha uma opção</option>
+                            <option value="1">Sim</option>
+                            <option value="2">Não</option>
+                        </select>
+                    </div>
+
+                    <button onclick="registroOcorrencia()"><b>Registrar</b></button>
+
+                </div>
+            </div>
+
+            <div class="cadastroDireito">
+
+                <div class="campoCadastro">
+                    <h1>Resolução</h1>
+                    <div class="campoTexto">
+                        <label for="comoResolver">Como resolver?</label>
+                        <input class="descricao" id="comoResolver" placeholder="Possível solução">
+                    </div>
+                    <div class="campoTexto">
+                        <label for="ajudaAranha">Spider-Ajuda?</label>
+                        <select id="ajudaAranha">
+                            <option class="nulo" value="0">Escolha uma opção</option>
+                            <option value="1">Sim</option>
+                            <option value="2">Não</option>
+                        </select>
+                    </div>
+                    <button onclick="registroSolucao()"><b>Registrar</b></button>
+                    <div class="hiPeter"><img src="../img site/hiPeter.png" width="250px"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
