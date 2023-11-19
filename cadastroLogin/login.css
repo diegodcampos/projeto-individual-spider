@@ -66,14 +66,6 @@ header a:hover {
     align-items: center;
 }
 
-.loginEsquerdo h1 {
-    margin-top: 45px;
-}
-
-.loginEsquerdo img {
-    margin-top: 35px;
-}
-
 .loginEsquerdo {
     width: 50%;
     height: 100%;
@@ -81,6 +73,22 @@ header a:hover {
     justify-content: center;
     align-items: center;
     flex-direction: column;
+}
+
+.loginEsquerdo .balaozinho {
+    display: none;
+    position: absolute;
+    margin-left: 40%;
+    margin-top: 10%;
+    width: 250px;
+}
+
+.loginEsquerdo h1 {
+    margin-top: 45px;
+}
+
+.loginEsquerdo img {
+    margin-top: 35px;
 }
 
 .loginDireito {
@@ -156,4 +164,15 @@ header a:hover {
 .btn-login:hover {
     color: white;
     box-shadow: inset 400px 0 0 0 #0a2b4e;
+}
+
+.sairLoading {
+    position: absolute;
+    margin-left: 24%;
+    margin-top: 21%;
+}
+
+.sairLoading img {
+    display: none;
+    width: 60px;
 }

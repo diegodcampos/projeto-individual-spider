@@ -3,10 +3,25 @@ function fazerLogin() {
     var loginSenha = senha.value
 
     if (loginUsuario.length <= 0 || loginSenha.length <= 0) {
-        alert("Nome ou senha incorretos, preencha novamente")
+
+        var loadingDiv = document.getElementById("loading");
+        loading.style.display = "block"
+
+        setTimeout(function () {
+            balaoFalaErro.style.display = "block"
+            loading.style.display = "none"
+        }, 1500)
+
     }
-    
+
     else {
-        location.href = '../perfil/perfilFeed.html'
+
+        var loadingDiv = document.getElementById("loading");
+        loading.style.display = "block"
+
+        setTimeout(function () {
+            location.href = '../perfil/perfilFeed.html'
+        }, 2800)
+        
     }
 }
