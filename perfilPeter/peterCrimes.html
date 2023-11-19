@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Meu Perfil</title>
     <link rel="stylesheet" href="peterCrimes.css">
+    <script src="peterCrimes.js"></script>
     <link rel="shortcut icon" href="../img site/milesIcon.png">
 </head>
 
@@ -39,21 +40,21 @@
             <div class="cadastroEsquerdo">
 
                 <div class="campoCadastro">
-                    <h1>Cadastro de ocorrências</h1>
+                    <h1>Cadastro de Ocorrências</h1>
                     <div class="campoTexto">
                         <label for="descCrime">Descrição do crime</label>
                         <input id="descCrime" placeholder="Descrever a ocorrência">
                     </div>
 
                     <div class="campoTexto">
-                        <label for="senha">Data do crime</label>
-                        <input type="date" placeholder="Insira a data">
+                        <label for="dataCrime">Data do crime</label>
+                        <input id="dataCrime" type="date">
                     </div>
 
                     <div class="campoTexto">
-                        <label for="resolvido">Está resolvido?</label>
+                        <label for="resolvido">Precisa de Spider-Bot?</label>
                         <select id="resolvido">
-                            <option value="0">Escolha uma opção</option>
+                            <option class="nulo" value="0">Escolha uma opção</option>
                             <option value="1">Sim</option>
                             <option value="2">Não</option>
                         </select>
@@ -73,9 +74,9 @@
                         <input id="comoResolver" placeholder="Possível solução">
                     </div>
                     <div class="campoTexto">
-                        <label for="spiderAjuda">Spider-Ajuda?</label>
-                        <select id="spiderAjuda">
-                            <option value="0">Escolha uma opção</option>
+                        <label for="ajudaAranha">Spider-Ajuda?</label>
+                        <select id="ajudaAranha">
+                            <option class="nulo" value="0">Escolha uma opção</option>
                             <option value="1">Sim</option>
                             <option value="2">Não</option>
                         </select>

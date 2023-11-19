@@ -7,7 +7,7 @@
     <title>Meu Perfil</title>
     <link rel="stylesheet" href="peterResults.css">
     <link rel="shortcut icon" href="../img site/milesIcon.png">
-    <script src="peterResults.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 </head>
 
 <body>
@@ -35,9 +35,93 @@
         </div>
 
         <div class="feedContent">
-            <div class="containerTexto"></div>
+
+            <div class="containerTotal">
+
+                <div class="leftContainer">
+                    <h1 style="color: white;">Crimes Cadastrados</h1>
+
+                    <div class="graficoCrimes">
+                        <canvas class="cadastroDonut" id="cadastroPizza"></canvas>
+                    </div>
+
+                    <img class="joiaPeter" src="../img site/peterLogin.gif" width="110px">
+
+                    <p style="color: white;">Total de crimes: 9.</p>
+                </div>
+
+                <div class="rightContainer">
+
+                    <div class="spiderHelp">
+
+                        <h1 style="color: white;">Spider-Help</h1>
+
+                        <img class="joiaPeter2" src="../img site/milesCadastro2.png" width="160px">
+
+                        <div class="lineHelp">
+                            <canvas id="lineHelp"></canvas>
+                        </div>
+                    </div>
+
+                    <div class="atualizarCrimes">
+                        <h1 style="color: white;">Atualizar crimes</h1>
+                    </div>
+
+                </div>
+
+            </div>
         </div>
     </div>
 </body>
 
 </html>
+
+<script>
+
+    const cadastrados = document.getElementById('cadastroPizza');
+
+    new Chart(cadastrados, {
+        type: 'doughnut',
+        data: {
+            labels: ['Crimes Resolvidos', 'Crimes Abertos',],
+            datasets: [{
+                label: 'Crimes',
+                data: [4, 5],
+                backgroundColor: [
+                    '#0a2b4e',
+                    '#a71814'
+                ],
+                borderColor: ['#10000a'],
+            },
+            ]
+        },
+    });
+
+    const ajudas = document.getElementById('lineHelp');
+
+    new Chart(lineHelp, {
+        type: 'bar',
+        data: {
+            labels: ['Ajudas Totais', 'Spider-Ajuda', 'Spider-Bot'],
+            datasets: [{
+                label: 'Total de Ajudas',
+                data: [5, 2, 3],
+                backgroundColor: [
+                    '#D9E2E7',
+                    '#a71814',
+                    '#0a2b4e'
+                ],
+                borderColor: ['#10000a'],
+            },
+            ]
+        },
+        options: {
+        scales: {
+            y: {
+                min: 0, 
+                max: 15,
+            }
+        }
+    }
+    });
+</script>
