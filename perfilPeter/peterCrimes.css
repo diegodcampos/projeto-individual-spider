@@ -87,7 +87,7 @@ li {
     display: flex;
     height: 88.2vh;
     width: 88.5%;
-    background-image: url('../img\ site/fundoPeter.png');
+    background-image: url('../img\ site/fundoMiles.png');
     background-size: 100%;
     justify-content: center;
     align-items: center;
@@ -123,13 +123,14 @@ li {
     padding: 0px 12px;
     background: rgb(15, 0, 9, 0.7);
     border-radius: 40px;
-    box-shadow: 0px 10px 40px rgb(15, 0, 0);
+    box-shadow: 0px 10px 40px rgb(0, 0, 0);
 }
 
 .campoCadastro h1 {
-    color: #a71814;
+    color: #d3231d;
     font-size: 26px;
-    margin-bottom: 20px;
+    margin-bottom: 15px;
+    margin-top: 15px;
 }
 
 .campoTexto {
@@ -144,11 +145,11 @@ li {
     width: 100%;
     border: none;
     border-radius: 10px;
-    padding: 12px;
+    padding: 13px;
     background: #D9E2E7;
     color: black;
-    font-size: 13px;
-    box-shadow: 0px 10px 40px rgb(15, 0, 0);
+    font-size: 14px;
+    box-shadow: 0px 10px 40px rgb(0, 0, 0);
     outline: none;
     box-sizing: border-box;
 }
@@ -156,11 +157,11 @@ li {
 .campoTexto select {
     width: 70%;
     border: none;
-    border-radius: 20px;
-    padding: 8px;
+    border-radius: 15px;
+    padding: 10px;
     background: #D9E2E7;
     color: black;
-    font-size: 14px;
+    font-size: 13px;
     box-shadow: 0px 10px 40px rgb(15, 0, 0);
     outline: none;
 }

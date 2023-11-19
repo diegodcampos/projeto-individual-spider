@@ -16,7 +16,7 @@
         <ul>
             <div><img src="../img site/peterIcon.png " width="120px"></div>
             <li>
-                <p>Seja bem-vindo, Peter!</p>
+                <p><b>Pronto para salvar a vizinhança hoje?</b></p>
             </li>
         </ul>
     </header>
@@ -42,8 +42,9 @@
                 <div class="campoCadastro">
                     <h1>Cadastro de Ocorrências</h1>
                     <div class="campoTexto">
-                        <label for="descCrime">Descrição do crime</label>
-                        <input id="descCrime" placeholder="Descrever a ocorrência">
+                        <label for="tituloCrime">Título do crime</label>
+                        <input class="descricao" id="tituloCrime" 
+                        placeholder="Nomeie a ocorrência">
                     </div>
 
                     <div class="campoTexto">
@@ -52,8 +53,8 @@
                     </div>
 
                     <div class="campoTexto">
-                        <label for="resolvido">Precisa de Spider-Bot?</label>
-                        <select id="resolvido">
+                        <label for="spiderBot">Precisa de Spider-Bot?</label>
+                        <select id="spiderBot">
                             <option class="nulo" value="0">Escolha uma opção</option>
                             <option value="1">Sim</option>
                             <option value="2">Não</option>
@@ -71,7 +72,7 @@
                     <h1>Resolução</h1>
                     <div class="campoTexto">
                         <label for="comoResolver">Como resolver?</label>
-                        <input id="comoResolver" placeholder="Possível solução">
+                        <input class="descricao" id="comoResolver" placeholder="Possível solução">
                     </div>
                     <div class="campoTexto">
                         <label for="ajudaAranha">Spider-Ajuda?</label>

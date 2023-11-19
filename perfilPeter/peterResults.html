@@ -15,7 +15,7 @@
         <ul>
             <div><img src="../img site/peterIcon.png " width="120px"></div>
             <li>
-                <p>Seja bem-vindo, Peter!</p>
+                <p><b>Pronto para salvar a vizinhança hoje?</b></p>
             </li>
         </ul>
     </header>
@@ -39,7 +39,11 @@
             <div class="containerTotal">
 
                 <div class="leftContainer">
-                    <h1 style="color: white;">Crimes Cadastrados</h1>
+                    <h1 style="color: white;">Crimes <span style="color: #d3231d;">
+                            Cadastrados</span>
+                    </h1>
+
+                    <img class="iconeMiles" src="../img site/milesIcon.png" width="45px">
 
                     <div class="graficoCrimes">
                         <canvas class="cadastroDonut" id="cadastroPizza"></canvas>
@@ -47,24 +51,32 @@
 
                     <img class="joiaPeter" src="../img site/peterLogin.gif" width="110px">
 
-                    <p style="color: white;">Total de crimes: 9.</p>
+                    <p style="color: white; font-size: 22px;">Número de crimes: 9.</p>
+
                 </div>
 
                 <div class="rightContainer">
 
                     <div class="spiderHelp">
 
-                        <h1 style="color: white;">Spider-Help</h1>
+                        <h1 style="color: white;"><span style="color: #d3231d;">
+                                Spider</span>-Help</h1>
 
-                        <img class="joiaPeter2" src="../img site/milesCadastro2.png" width="160px">
+                        <img class="iconeMiles2" src="../img site/milesIcon.png" width="45px">
+
+                        <img class="milesUpDown" src="../img site/imgMiles.png" width="128px">
 
                         <div class="lineHelp">
                             <canvas id="lineHelp"></canvas>
                         </div>
+
                     </div>
 
                     <div class="atualizarCrimes">
-                        <h1 style="color: white;">Atualizar crimes</h1>
+                        <h1 style="color: white;"><span style="color: #d3231d;">
+                                Atualizar</span> crimes
+                        </h1>
+
                     </div>
 
                 </div>
@@ -104,7 +116,7 @@
         data: {
             labels: ['Ajudas Totais', 'Spider-Ajuda', 'Spider-Bot'],
             datasets: [{
-                label: 'Total de Ajudas',
+                label: 'Ajudas Necessárias',
                 data: [5, 2, 3],
                 backgroundColor: [
                     '#D9E2E7',
@@ -116,12 +128,12 @@
             ]
         },
         options: {
-        scales: {
-            y: {
-                min: 0, 
-                max: 15,
+            scales: {
+                y: {
+                    min: 0,
+                    max: 15,
+                }
             }
         }
-    }
     });
 </script>

@@ -89,7 +89,7 @@ li {
     width: 88.5%;
     align-items: center;
     justify-content: center;
-    background-image: url('../img\ site/fundoPeter.png');
+    background-image: url('../img\ site/fundoMiles.png');
     background-size: 100%;
 }
 
@@ -111,7 +111,7 @@ li {
     align-items: center;
     width: 100%;
     height: 100%;
-    background: rgb(15, 0, 9, 0.7);
+    background: rgb(15, 0, 9, 0.9);
     border-radius: 25px;
 }
 
@@ -121,6 +121,12 @@ li {
     margin-bottom: 7%;
 }
 
+.leftContainer .iconeMiles {
+    position: absolute;
+    margin-bottom: 28.7%;
+    margin-left: 15%;
+}
+
 .leftContainer .joiaPeter {
     position: absolute;
     margin-left: 30%;
@@ -128,7 +134,7 @@ li {
 }
 
 .leftContainer p {
-    margin-left: -60%;
+    margin-left: -50%;
 }
 
 .graficoCrimes {
@@ -160,7 +166,7 @@ li {
     width: 100%;
     height: 50%;
     border-radius: 25px;
-    background: rgb(15, 0, 9, 0.7);
+    background: rgb(15, 0, 9, 0.9);
 }
 
 .spiderHelp h1 {
@@ -169,10 +175,31 @@ li {
     margin-bottom: 4%;
 }
 
-.rightContainer .joiaPeter2 {
+.spiderHelp .iconeMiles2 {
     position: absolute;
-    margin-left: 28%;
-    margin-bottom: 7%;
+    margin-bottom: 12.3%;
+    margin-right: 2%;
+}
+
+.rightContainer .milesUpDown {
+    position: absolute;
+    margin-left: 32%;
+    margin-bottom: 8%;
+    animation: upDownMiles 3s infinite;
+}
+
+@keyframes upDownMiles {
+    0% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-10px);
+    }
+
+    100% {
+        transform: translateY(0);
+    }
 }
 
 .lineHelp {
@@ -193,5 +220,5 @@ li {
     width: 100%;
     height: 50%;
     border-radius: 25px;
-    background: rgb(15, 0, 9, 0.7);
+    background: rgb(15, 0, 9, 0.9);
 }

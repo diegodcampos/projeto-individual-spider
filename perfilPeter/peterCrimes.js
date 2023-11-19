@@ -1,9 +1,9 @@
 function registroOcorrencia() {
-    var descricaoCrime = descCrime.value
+    var nomeCrime = tituloCrime.value
     var dtCrime = dataCrime.value
-    var estaResolvido = resolvido.value
+    var ajudaBot = spiderBot.value
 
-    if (descricaoCrime.length <= 0 || dtCrime.length <= 0 || estaResolvido == 0) {
+    if (tituloCrime.length <= 0 || dtCrime.length <= 0 || spiderBot == 0) {
         alert("Insira corretamente as informações no cadastro")
     }
 }
