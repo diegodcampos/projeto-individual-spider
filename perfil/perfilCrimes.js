@@ -4,7 +4,33 @@ function registroOcorrencia() {
     var ajudaBot = spiderBot.value
 
     if (tituloCrime.length <= 0 || dtCrime.length <= 0 || spiderBot == 0) {
-        alert("Insira corretamente as informações no cadastro")
+
+        var loadingDiv = document.getElementById("loadingCrime");
+        loadingCrime.style.display = "block"
+
+        setTimeout(function () {
+            loadingCrime.style.display = "none"
+            pPeter.style.display = "block"
+        }, 2000)
+
+    }
+
+    else {
+
+        var loadingDiv = document.getElementById("loadingCrime");
+        loadingCrime.style.display = "block"
+
+        setTimeout(function () {
+            loadingCrime.style.display = "none"
+            imgCheckEsq.style.display = "block"
+            pPeter.style.display = "none"
+
+            setTimeout(function () {
+                imgCheckEsq.style.display = "none"
+            }, 4000);
+
+        }, 2000)
+
     }
 }
 
@@ -13,7 +39,33 @@ function registroSolucao() {
     var spiderAjuda = ajudaAranha.value
 
     if (resolucao.length <= 0 || spiderAjuda == 0) {
-        alert("Insira corretamente as informações na resolução")
+
+        var loadingDiv = document.getElementById("loadingResolucao");
+        loadingResolucao.style.display = "block"
+
+        setTimeout(function () {
+            loadingResolucao.style.display = "none"
+            pPeter.style.display = "block"
+        }, 2800)
+
+    }
+
+    else {
+
+        var loadingDiv = document.getElementById("loadingResolucao");
+        loadingResolucao.style.display = "block"
+
+        setTimeout(function () {
+            loadingResolucao.style.display = "none"
+            imgCheckDir.style.display = "block"
+            pPeter.style.display = "none"
+
+            setTimeout(function () {
+                imgCheckDir.style.display = "none"
+            }, 4000);
+
+        }, 2800)
+
     }
 }
 

@@ -46,8 +46,7 @@
                     <h1>Cadastro de Ocorrências</h1>
                     <div class="campoTexto">
                         <label for="tituloCrime">Título do crime</label>
-                        <input class="descricao" id="tituloCrime" 
-                        placeholder="Nomeie a ocorrência">
+                        <input class="descricao" id="tituloCrime" placeholder="Nomeie a ocorrência">
                     </div>
 
                     <div class="campoTexto">
@@ -65,6 +64,10 @@
                     </div>
 
                     <button onclick="registroOcorrencia()"><b>Registrar</b></button>
+
+                    <img id="loadingCrime" class="loadCrime" src="../img site/loading.gif">
+
+                    <img id="imgCheckEsq" class="checkCerto" src="../img site/check.png">
 
                 </div>
             </div>
@@ -85,8 +88,20 @@
                             <option value="2">Não</option>
                         </select>
                     </div>
+
                     <button onclick="registroSolucao()"><b>Registrar</b></button>
+
+                    <img id="loadingResolucao" class="loadCrime" src="../img site/loading.gif">
+
+                    <img id="imgCheckDir" class="checkCerto" src="../img site/check.png">
+                
+                    <p id="pPeter" class="textoHiPeter">
+                        <b>Formulário preenchido <span style="color: #d3231d;">
+                                incorretamente!</span></b>
+                    </p>
+
                     <div class="hiPeter"><img src="../img site/hiPeter.png" width="250px"></div>
+
                 </div>
             </div>
         </div>
