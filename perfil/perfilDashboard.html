@@ -42,7 +42,7 @@
             <div class="containerTotal">
 
                 <div class="leftContainer">
-                    
+
                     <h1 style="color: white;">Crimes <span style="color: #d3231d;">
                             Registrados</span>
                     </h1>
@@ -123,6 +123,9 @@
     });
 
     const ajudas = document.getElementById('lineHelp');
+
+    Chart.defaults.font.size = 15;
+    Chart.defaults.color = 'white';
 
     new Chart(lineHelp, {
         type: 'bar',
