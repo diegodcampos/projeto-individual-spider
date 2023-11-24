@@ -4,9 +4,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
-    <script src="script.js"></script>
-    <link rel="shortcut icon" href="../img site/milesIcon.png">
+    <link rel="stylesheet" href="../css/style.css">
+    <script src="../js/script.js"></script>
+    <link rel="shortcut icon" href="../assets/milesIcon.png">
     <title>Spider-Man</title>
 </head>
 
@@ -15,11 +15,11 @@
 
     <header>
         <ul class="ul-header">
-            <div class="div-logo"><img src="../img site/peterIcon.png " width="130px"></div>
+            <div class="div-logo"><img src="../assets/peterIcon.png " width="130px"></div>
             <li><a href="#idSection1"><b>Início</b></a></li>
             <li><a href="#idSection2"><b>Heróis</b></a></li>
             <li><a href="#idSection3"><b>Valores</b></a></li>
-            <li><a href="../cadastroLogin/login.html"><b>Acessar</b></a></li>
+            <li><a href="../cadastro.html"><b>Acessar</b></a></li>
         </ul>
     </header>
 
@@ -29,32 +29,36 @@
         <div class="slogan">
             <p><b>Os <span style="color: #d3231d;">melhores</span>
                     amigos <br> da vizinhança.</b></p>
-                </div>
-                
-                <div class="jogar">
-                    <div class="btnVamosJogar">
-                        <a href="../cadastroLogin/cadastro.html"><b>Cadastrar</b></a>
-                    </div>
-                    <div class="scroll"><hr id="idSection2"></div>
-                    <img src="../img site/hiPeter.png">
-                </div>
-                  
-            </section>
-            
-            <section id="heroisSection" class="section2">
-                
-                <div class="sobre">
+        </div>
+
+        <div class="jogar">
+            <div class="btnVamosJogar">
+                <a href="../cadastro.html"><b>Cadastrar</b></a>
+            </div>
+            <div class="scroll">
+                <hr id="idSection2">
+            </div>
+            <img src="../assets/hiPeter.png">
+        </div>
+
+    </section>
+
+    <section id="heroisSection" class="section2">
+
+        <div class="sobre">
             <h1><b>Sobre os heróis</b></h1>
         </div>
 
         <div id="infoSpiders" class="herois">
-            <div id="divPeter" class="peter"><img src="../img site/imgPeter.png" width="280px"><br>
+            <div id="divPeter" class="peter">
+                <img src="../assets/imgPeter.png" width="280px"><br>
                 <button id="botaoPeter" onclick="infoPeter()"><b>Peter</b></button>
             </div>
 
             <div id="textoMiles" class="exibirMiles"></div>
 
-            <div id="divMiles" class="miles"><img src="../img site/imgMiles.png" width="280px"><br>
+            <div id="divMiles" class="miles">
+                <img src="../assets/imgMiles.png" width="280px"><br>
                 <button id="botaoMiles" onclick="infoMiles()"><b>Miles</b></button>
             </div>
 
@@ -72,15 +76,18 @@
         </div>
 
         <div class="valores">
-            <div class="empatia"><img src="../img site/empatia.png" width="220px"><br>
+            <div class="empatia">
+                <img src="../assets/empatia.png" width="220px"><br>
                 <p><b>Empatia</b></p>
             </div>
 
-            <div class="responsabilidade"><img src="../img site/responsabilidade.png" width="220px"><br>
+            <div class="responsabilidade">
+                <img src="../assets/responsabilidade.png" width="220px"><br>
                 <p><b>Reponsabilidade</b></p>
             </div>
 
-            <div class="solidariedade"><img src="../img site/solidariedade.png" width="220px"><br>
+            <div class="solidariedade">
+                <img src="../assets/solidariedade.png" width="220px"><br>
                 <p><b>Solidariedade</b></p>
             </div>
 
@@ -92,9 +99,10 @@
 
         <ul class="ul-footer">
             <li class="liFooter">
-                <p style="color: white;">Projeto individual realizado por Diego de Campos Arruda.</p>
+                <p style="color: white;">
+                    Projeto individual realizado por Diego de Campos Arruda.</p>
             </li>
-            <li class="liFooter"><img src="../img site/milesIcon.png" width="80px"></li>
+            <li class="liFooter"><img src="../assets/milesIcon.png" width="80px"></li>
         </ul>
 
     </footer>

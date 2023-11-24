@@ -44,7 +44,7 @@ header {
 
 .ul-header li {
     padding-left: 5px;
-    background: url('../img site/milesIcon.png') no-repeat;
+    background: url('../assets/milesIcon.png') no-repeat;
     background-size: 23px 23px;
 }
 
@@ -85,7 +85,7 @@ hr {
     display: flex;
     gap: 100px;
     height: 560px;
-    background-image: url(../img\ site/imgSection1.png);
+    background-image: url('../assets/imgSection1.png');
     background-size: cover;
 }
 
@@ -156,7 +156,7 @@ hr {
 
 .section2 {
     height: 550px;
-    background-image: url(../img\ site/imgSection2.png);
+    background-image: url('../assets/imgSection2.png');
     background-size: cover;
 }
 
@@ -301,7 +301,7 @@ hr {
 
 .section3 {
     height: 450px;
-    background-image: url(../img\ site/imgSection3.png);
+    background-image: url('../assets/imgSection3.png');
     background-size: cover;
 }
 

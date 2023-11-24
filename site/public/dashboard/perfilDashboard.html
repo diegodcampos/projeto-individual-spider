@@ -5,15 +5,15 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Meu Perfil</title>
-    <link rel="stylesheet" href="perfilDashboard.css">
-    <link rel="shortcut icon" href="../img site/milesIcon.png">
+    <link rel="stylesheet" href="../css/perfilDashboard.css">
+    <link rel="shortcut icon" href="../assets/milesIcon.png">
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 </head>
 
 <body>
     <header>
         <ul>
-            <div><img src="../img site/peterIcon.png " width="120px"></div>
+            <div><img src="../assets/peterIcon.png " width="120px"></div>
             <li>
                 <p><b>Pronto para salvar a vizinhança hoje?</b></p>
             </li>
@@ -25,13 +25,13 @@
         <div class="sideNav">
             <div class="itensDiv">
                 <ul>
-                    <a href="../perfil/perfilFeed.html">Feed</a> <br> <br>
-                    <a href="../perfil/perfilCrimes.html">Crimes</a> <br> <br>
+                    <a href="../perfilFeed.html">Feed</a> <br> <br>
+                    <a href="../perfilCrimes.html">Crimes</a> <br> <br>
                     <a class="resultados">Resultados</a> <br> <br>
                     <br> <br> <br> <br> <br>
                     <a onclick="sairPerfil()">Sair</a> <br>
                     <div class="sairLoading">
-                        <img id="loading" src="../img site/loading.gif">
+                        <img id="loading" src="../assets/loading.gif">
                     </div>
                 </ul>
             </div>
@@ -47,13 +47,13 @@
                             Registrados</span>
                     </h1>
 
-                    <img class="iconeMiles" src="../img site/milesIcon.png" width="45px">
+                    <img class="iconeMiles" src="../assets/milesIcon.png" width="45px">
 
                     <div class="graficoCrimes">
                         <canvas class="cadastroDonut" id="cadastroPizza"></canvas>
                     </div>
 
-                    <img class="joiaPeter" src="../img site/peterLogin.gif" width="110px">
+                    <img class="joiaPeter" src="../assets/peterLogin.gif" width="110px">
 
                     <p style="color: white; font-size: 22px;">Número de crimes:
                         <span style="color: #d3231d; font-size: 30px;"><b>9</b></span>.
@@ -68,9 +68,9 @@
                         <h1 style="color: white;"><span style="color: #d3231d;">
                                 Spider</span>-Help</h1>
 
-                        <img class="iconeMiles2" src="../img site/milesIcon.png" width="45px">
+                        <img class="iconeMiles2" src="../assets/milesIcon.png" width="45px">
 
-                        <img class="milesUpDown" src="../img site/imgMiles.png" width="128px">
+                        <img class="milesUpDown" src="../assets/imgMiles.png" width="128px">
 
                         <div class="lineHelp">
                             <canvas id="lineHelp"></canvas>
@@ -85,33 +85,33 @@
 
                         <p class="dicaCrimes">(Clique no check caso <br> tenha sido resolvido)</p>
 
-                        <img class="iconeMiles3" src="../img site/milesIcon.png" width="45px">
+                        <img class="iconeMiles3" src="../assets/milesIcon.png" width="45px">
 
                         <div class="colunaCrimes">
 
                             <p>O homem-areia está a solta pela cidade
-                                <img src="../img site/check.png" width="18px">
+                                <img src="../assets/check.png" width="18px">
                             </p> <br>
                             <p>O homem-areia está a solta pela cidade
-                                <img src="../img site/check.png" width="18px">
+                                <img src="../assets/check.png" width="18px">
                             </p> <br>
                             <p>O homem-areia está a solta pela cidade
-                                <img src="../img site/check.png" width="18px">
+                                <img src="../assets/check.png" width="18px">
                             </p> <br>
                             <p>O homem-areia está a solta pela cidade
-                                <img src="../img site/check.png" width="18px">
+                                <img src="../assets/check.png" width="18px">
                             </p> <br>
                             <p>O homem-areia está a solta pela cidade
-                                <img src="../img site/check.png" width="18px">
+                                <img src="../assets/check.png" width="18px">
                             </p> <br>
                             <p>O homem-areia está a solta pela cidade
-                                <img src="../img site/check.png" width="18px">
+                                <img src="../assets/check.png" width="18px">
                             </p> <br>
                             <p>O homem-areia está a solta pela cidade
-                                <img src="../img site/check.png" width="18px">
+                                <img src="../assets/check.png" width="18px">
                             </p> <br>
                             <p>O homem-areia está a solta pela cidade
-                                <img src="../img site/check.png" width="18px">
+                                <img src="../assets/check.png" width="18px">
                             </p>
 
                         </div>
@@ -137,7 +137,7 @@
         loading.style.display = "block"
 
         setTimeout(function () {
-            location.href = '../landingPage/index.html'
+            location.href = '../index.html'
         }, 2800)
     }
 

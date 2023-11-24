@@ -20,7 +20,7 @@ function fazerLogin() {
         loading.style.display = "block"
 
         setTimeout(function () {
-            location.href = '../perfil/perfilFeed.html'
+            location.href = '../public/perfilFeed.html'
         }, 2800)
         
     }

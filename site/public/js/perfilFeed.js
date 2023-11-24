@@ -3,6 +3,6 @@ function sairPerfil() {
     loading.style.display = "block"
 
     setTimeout(function () {
-        location.href = '../landingPage/index.html'
+        location.href = '../public/index.html'
     }, 2800)
 }
