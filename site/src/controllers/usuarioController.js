@@ -17,28 +17,43 @@ function fazerLogin(req, res) {
                     console.log(`\nResultados encontrados: ${resultadoFazerLogin.length}`);
                     console.log(`Resultados: ${JSON.stringify(resultadoFazerLogin)}`); // transforma JSON em String
 
-                    if (resultadoFazerLogin.length == 1) {
-                        console.log(resultadoFazerLogin);
+                    // if (resultadoFazerLogin.length == 1) {
+                    //     res.json({
+                    //         id: resultadoFazerLogin[0].idUsuario,
+                    //         nome: resultadoFazerLogin[0].nomeUsuario,
+                    //     })
+                    // } else {
+                    //     res.status(204).json({ aquarios: [] });
+                    // } 
 
-                        aquarioModel.buscarAquariosPorEmpresa(resultadoFazerLogin[0].empresaId)
-                            .then((resultadoAquarios) => {
-                                if (resultadoAquarios.length > 0) {
-                                    res.json({
-                                        id: resultadoFazerLogin[0].idUsuario,
-                                        nome: resultadoFazerLogin[0].nomeUsuario,
-                                        senha: resultadoFazerLogin[0].senhaUsuario,
-                                        aquarios: resultadoAquarios
-                                    });
-                                } else {
-                                    res.status(204).json({ aquarios: [] });
-                                }
-                            })
-                    } else if (resultadoFazerLogin.length == 0) {
-                        res.status(403).send("Nome e/ou senha inválido(s)");
-                    } else {
-                        res.status(403).send("Mais de um usuário com o mesmo login e senha!");
-                    }
+                    //     if (resultadoAquarios.length > 0) {
+                    //         res.json({
+                    //             id: resultadoFazerLogin[0].idUsuario,
+                    //             nome: resultadoFazerLogin[0].nomeUsuario,
+                    //             senha: resultadoFazerLogin[0].senhaUsuario,
+                    //             aquarios: resultadoAquarios
+                    //         });
+                    //     }
+                    //     else {
+                    //         res.status(204).json({ aquarios: [] });
+                    //     }
+
+                    //  else if (resultadoFazerLogin.length == 0) {
+                    //     res.status(403).send("Nome e/ou senha inválido(s)");
+                    // } else {
+                    //     res.status(403).send("Mais de um usuário com o mesmo login e senha!");
+                    // }
+
+                    if (resultadoFazerLogin.length == 1) {
+                        res.json({
+                            id: resultadoFazerLogin[0].idUsuario,
+                            nome: resultadoFazerLogin[0].nomeUsuario,
+                        });
+
+                    } 
+
                 }
+
             ).catch(
                 function (erro) {
                     console.log(erro);

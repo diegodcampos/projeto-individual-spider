@@ -29,7 +29,8 @@ function fazerLogin() {
                 senhaServer: loginSenha
             })
         }).then(function (resposta) {
-            console.log("ESTOU NO THEN DO fazerCadastro()!")
+            console.log("ESTOU NO THEN DO fazerLogin()!")
+            console.log(resposta)
 
             if (resposta.ok) {
                 console.log(resposta);
@@ -45,7 +46,7 @@ function fazerLogin() {
                 loading.style.display = "block"
 
                 setTimeout(function () {
-                    location.href = '../public/perfilFeed.html'
+                    location.href = '../perfilFeed.html'
                 }, 2800)
 
             } else {
@@ -69,8 +70,6 @@ function fazerLogin() {
         }).catch(function (erro) {
             console.log(erro);
         })
-
-        return false;
 
     }
 
