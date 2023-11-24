@@ -3,7 +3,7 @@ function registroOcorrencia() {
     var dtCrime = dataCrime.value
     var ajudaBot = spiderBot.value
 
-    if (tituloCrime.length <= 0 || dtCrime.length <= 0 || spiderBot == 0) {
+    if (nomeCrime.length <= 0 || dtCrime.length <= 0 || ajudaBot == 0) {
 
         var loadingDiv = document.getElementById("loadingCrime");
         loadingCrime.style.display = "block"
