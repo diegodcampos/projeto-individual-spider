@@ -1,9 +1,9 @@
 var database = require("../database/config")
 
-function autenticar(email, senha) {
-    console.log("ACESSEI O USUARIO MODEL \n \n\t\t >> Se aqui der erro de 'Error: connect ECONNREFUSED',\n \t\t >> verifique suas credenciais de acesso ao banco\n \t\t >> e se o servidor de seu BD está rodando corretamente. \n\n function entrar(): ", email, senha)
+function fazerLogin(nome, senha) {
+    console.log("ACESSEI O USUARIO MODEL \n \n\t\t >> Se aqui der erro de 'Error: connect ECONNREFUSED',\n \t\t >> verifique suas credenciais de acesso ao banco\n \t\t >> e se o servidor de seu BD está rodando corretamente. \n\n function fazerLogin(): ", nome, senha)
     var instrucao = `
-        SELECT id, nome, email, fk_empresa as empresaId FROM usuario WHERE email = '${email}' AND senha = '${senha}';
+        SELECT idUsuario, nomeUsuario, senhaUsuario FROM Usuario WHERE nomeUsuario = '${nome}' AND senhaUsuario = '${senha}';
     `;
     console.log("Executando a instrução SQL: \n" + instrucao);
     return database.executar(instrucao);
@@ -23,6 +23,6 @@ function fazerCadastro(nome, senha, heroiFavorito) {
 }
 
 module.exports = {
-    autenticar,
+    fazerLogin,
     fazerCadastro
 };

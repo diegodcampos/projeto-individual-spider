@@ -8,8 +8,8 @@ router.post("/fazerCadastro", function (req, res) {
     usuarioController.fazerCadastro(req, res);
 })
 
-router.post("/autenticar", function (req, res) {
-    usuarioController.autenticar(req, res);
+router.post("/fazerLogin", function (req, res) {
+    usuarioController.fazerLogin(req, res);
 });
 
 module.exports = router;

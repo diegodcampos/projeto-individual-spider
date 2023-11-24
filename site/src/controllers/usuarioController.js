@@ -1,7 +1,7 @@
 var usuarioModel = require("../models/usuarioModel");
 var aquarioModel = require("../models/aquarioModel");
 
-function autenticar(req, res) {
+function fazerLogin(req, res) {
     var nome = req.body.nomeServer;
     var senha = req.body.senhaServer;
 
@@ -11,31 +11,30 @@ function autenticar(req, res) {
         res.status(400).send("Sua senha está indefinida!");
     } else {
 
-        usuarioModel.autenticar(nome, senha)
+        usuarioModel.fazerLogin(nome, senha)
             .then(
-                function (resultadoAutenticar) {
-                    console.log(`\nResultados encontrados: ${resultadoAutenticar.length}`);
-                    console.log(`Resultados: ${JSON.stringify(resultadoAutenticar)}`); // transforma JSON em String
+                function (resultadoFazerLogin) {
+                    console.log(`\nResultados encontrados: ${resultadoFazerLogin.length}`);
+                    console.log(`Resultados: ${JSON.stringify(resultadoFazerLogin)}`); // transforma JSON em String
 
-                    if (resultadoAutenticar.length == 1) {
-                        console.log(resultadoAutenticar);
+                    if (resultadoFazerLogin.length == 1) {
+                        console.log(resultadoFazerLogin);
 
-                        aquarioModel.buscarAquariosPorEmpresa(resultadoAutenticar[0].empresaId)
+                        aquarioModel.buscarAquariosPorEmpresa(resultadoFazerLogin[0].empresaId)
                             .then((resultadoAquarios) => {
                                 if (resultadoAquarios.length > 0) {
                                     res.json({
-                                        id: resultadoAutenticar[0].id,
-                                        email: resultadoAutenticar[0].email,
-                                        nome: resultadoAutenticar[0].nome,
-                                        senha: resultadoAutenticar[0].senha,
+                                        id: resultadoFazerLogin[0].idUsuario,
+                                        nome: resultadoFazerLogin[0].nomeUsuario,
+                                        senha: resultadoFazerLogin[0].senhaUsuario,
                                         aquarios: resultadoAquarios
                                     });
                                 } else {
                                     res.status(204).json({ aquarios: [] });
                                 }
                             })
-                    } else if (resultadoAutenticar.length == 0) {
-                        res.status(403).send("Email e/ou senha inválido(s)");
+                    } else if (resultadoFazerLogin.length == 0) {
+                        res.status(403).send("Nome e/ou senha inválido(s)");
                     } else {
                         res.status(403).send("Mais de um usuário com o mesmo login e senha!");
                     }
@@ -86,6 +85,6 @@ function fazerCadastro(req, res) {
 }
 
 module.exports = {
-    autenticar,
+    fazerLogin,
     fazerCadastro
 }
