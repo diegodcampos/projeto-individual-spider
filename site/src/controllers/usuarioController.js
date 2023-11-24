@@ -1,5 +1,4 @@
 var usuarioModel = require("../models/usuarioModel");
-var aquarioModel = require("../models/aquarioModel");
 
 function fazerLogin(req, res) {
     var nome = req.body.nomeServer;
@@ -50,7 +49,16 @@ function fazerLogin(req, res) {
                             nome: resultadoFazerLogin[0].nomeUsuario,
                         });
 
-                    } 
+                    } else {
+                        var loadingDiv = document.getElementById("loading");
+                        loading.style.display = "block"
+
+                        setTimeout(function () {
+                            balaoFalaErro.style.display = "block"
+                            loading.style.display = "none"
+                        }, 1500)
+                        
+                    }
 
                 }
 
