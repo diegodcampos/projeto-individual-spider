@@ -12,4 +12,8 @@ router.post("/fazerLogin", function (req, res) {
     usuarioController.fazerLogin(req, res);
 });
 
+router.post("/registroOcorrencia", function (req, res) {
+    usuarioController.registroOcorrencia(req, res);
+});
+
 module.exports = router;
