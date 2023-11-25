@@ -38,8 +38,8 @@ function fazerLogin() {
                 resposta.json().then(json => {
                     console.log(json);
                     console.log(JSON.stringify(json));
-                    sessionStorage.NOME_USUARIO = json.nomeUsuario;
-                    sessionStorage.ID_USUARIO = json.idUsuario;
+                    sessionStorage.NOME_USUARIO = json.nome;
+                    sessionStorage.ID_USUARIO = json.id;
                 });
 
                 var loadingDiv = document.getElementById("loading");
