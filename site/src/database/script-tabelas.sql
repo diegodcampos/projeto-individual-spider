@@ -12,6 +12,7 @@ idCrime int primary key auto_increment,
 tituloCrime varchar(150),
 dataCrime date,
 spiderBot int,
+statusCrime int,
 fkUsuario int,
 foreign key (fkUsuario)
 references Usuario(idUsuario));
@@ -25,3 +26,5 @@ foreign key (fkCrime)
 references CadastroCrimes(idCrime));
 
 select * from Usuario;
+select * from CadastroCrimes;
+select * from ResolucaoCrimes;

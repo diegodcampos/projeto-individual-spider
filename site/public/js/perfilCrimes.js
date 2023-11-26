@@ -37,6 +37,26 @@ function registroOcorrencia() {
 
             if (resposta.ok) {
 
+                fetch("/usuarios/registroIdCrime", {
+                    method: "POST",
+                    headers: {
+                        "Content-Type": "application/json",
+                    },
+                    body: JSON.stringify({
+                        crimeServer: nomeCrime,
+                        dataServer: dtCrime
+                    }),
+                })
+                    .then(function (resposta2) {
+                        console.log("resposta: ", resposta2);
+
+                        resposta2.json().then(json => {
+                            console.log(json);
+                            console.log(JSON.stringify(json));
+                            sessionStorage.ID_CRIME = json.crimeId;
+                        });
+                    })
+
                 var loadingDiv = document.getElementById("loadingCrime");
                 loadingCrime.style.display = "block"
 
@@ -67,11 +87,10 @@ function registroOcorrencia() {
 
 }
 
-
-
 function registroSolucao() {
     var resolucao = comoResolver.value
     var spiderAjuda = ajudaAranha.value
+    var idCrime = Number(sessionStorage.ID_CRIME);
 
     if (resolucao.length <= 0 || spiderAjuda == 0) {
 
@@ -90,16 +109,44 @@ function registroSolucao() {
         var loadingDiv = document.getElementById("loadingResolucao");
         loadingResolucao.style.display = "block"
 
-        setTimeout(function () {
-            loadingResolucao.style.display = "none"
-            imgCheckDir.style.display = "block"
-            pPeter.style.display = "none"
+        fetch("/usuarios/registroSolucao", {
+            method: "POST",
+            headers: {
+                "Content-Type": "application/json",
+            },
+            body: JSON.stringify({
+                resolucaoServer: resolucao,
+                ajudaServer: spiderAjuda,
+                idCrimeServer: idCrime
+            }),
+        })
+            .then(function (resposta) {
+                console.log("resposta: ", resposta);
 
-            setTimeout(function () {
-                imgCheckDir.style.display = "none"
-            }, 4000);
+                if (resposta.ok) {
 
-        }, 2800)
+                    setTimeout(function () {
+                        loadingResolucao.style.display = "none"
+                        imgCheckDir.style.display = "block"
+                        pPeter.style.display = "none"
+
+                        setTimeout(function () {
+                            imgCheckDir.style.display = "none"
+                        }, 4000);
+
+                    }, 2800)
+
+                } else {
+
+                    console.log(resolucaoCrime, spiderAjuda, idCrime)
+                    throw ("Houve um erro ao cadastrar")
+
+                }
+
+            })
+            .catch(function (resposta) {
+                console.log(`#ERRO: ${resposta}`);
+            });
 
     }
 }

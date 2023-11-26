@@ -16,4 +16,12 @@ router.post("/registroOcorrencia", function (req, res) {
     usuarioController.registroOcorrencia(req, res);
 });
 
+router.post("/registroIdCrime", function (req, res) {
+    usuarioController.registroIdCrime(req, res);
+});
+
+router.post("/registroSolucao", function (req, res) {
+    usuarioController.registroSolucao(req, res);
+});
+
 module.exports = router;
