@@ -10,7 +10,8 @@
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 </head>
 
-<body onload="obterDadosGrafico(sessionStorage.ID_USUARIO)">
+<body onload="obterDadosGrafico(sessionStorage.ID_USUARIO); 
+    obterDadosGraficoAjuda(sessionStorage.ID_USUARIO)">
 
     <header>
         <ul>
@@ -152,75 +153,15 @@
             });
     }
 
-    // function plotarGrafico(resposta, idUsuario) {
-
-    //     console.log('iniciando plotagem do gráfico...');
-
-    //     // // Criando estrutura para plotar gráfico - labels
-    //     // let labels = [];
-
-    //     // // Criando estrutura para plotar gráfico - dados
-    //     // let dados = {
-    //     //     labels: labels,
-    //     //     datasets: [{
-    //     //         label: 'Umidade',
-    //     //         data: [],
-    //     //         fill: false,
-    //     //         borderColor: 'rgb(75, 192, 192)',
-    //     //         tension: 0.1
-    //     //     },
-    //     //     {
-    //     //         label: 'Temperatura',
-    //     //         data: [],
-    //     //         fill: false,
-    //     //         borderColor: 'rgb(199, 52, 52)',
-    //     //         tension: 0.1
-    //     //     }]
-    //     // };
-
-    //     console.log('----------------------------------------------')
-    //     console.log('Estes dados foram recebidos pela funcao "obterDadosGrafico" e passados para "plotarGrafico":')
-    //     console.log(resposta)
-
-    //     // Inserindo valores recebidos em estrutura para plotar o gráfico
-    //     for (i = 0; i < resposta.length; i++) {
-    //         var registro = resposta[i];
-    //         labels.push(registro.momento_grafico);
-    //         dados.datasets[0].data.push(registro.umidade);
-    //         dados.datasets[1].data.push(registro.temperatura);
-    //     }
-
-    //     console.log('----------------------------------------------')
-    //     console.log('O gráfico será plotado com os respectivos valores:')
-    //     console.log('Labels:')
-    //     console.log(labels)
-    //     console.log('Dados:')
-    //     console.log(dados.datasets)
-    //     console.log('----------------------------------------------')
-
-    //     // // Criando estrutura para plotar gráfico - config
-    //     // const config = {
-    //     //     type: 'line',
-    //     //     data: dados,
-    //     // };
-
-    //     // // Adicionando gráfico criado em div na tela
-    //     // let myChart = new Chart(
-    //     //     document.getElementById(`myChartCanvas${idAquario}`),
-    //     //     config
-    //     // );
-
-    // }
-
     let cadastrados = document.getElementById('cadastroPizza');
 
     var chartCrimes = new Chart(cadastrados, {
         type: 'doughnut',
         data: {
-            labels: ['Crimes Resolvidos', 'Crimes Abertos',],
+            labels: ['Crimes Abertos', 'Crimes Resolvidos'],
             datasets: [{
                 label: 'Crimes',
-                data: [4, 5],
+                data: [],
                 backgroundColor: [
                     '#0a2b4e',
                     '#a71814'
@@ -231,18 +172,37 @@
         },
     });
 
+    function obterDadosGraficoAjuda(idUsuario) {
+
+        fetch(`/medidas/graficoAjudas/${idUsuario}`, { cache: 'no-store' }).then(function (response) {
+            if (response.ok) {
+                response.json().then(function (resposta) {
+                    console.log(`Dados recebidos: ${JSON.stringify(resposta)}`);
+                    chartAjudas.data.datasets[0].data = [resposta[0].totalAjudas]
+                    // + [resposta[0].totalAjudasSoma] Para adicionar o outro item do chart!!! 
+                    chartAjudas.update()
+                });
+            } else {
+                console.error('Nenhum dado encontrado ou erro na API');
+            }
+        })
+            .catch(function (error) {
+                console.error(`Erro na obtenção dos dados p/ gráfico: ${error.message}`);
+            });
+    }
+
     let ajudas = document.getElementById('lineHelp');
 
     Chart.defaults.font.size = 15;
     Chart.defaults.color = 'white';
 
-    new Chart(lineHelp, {
+    var chartAjudas = new Chart(lineHelp, {
         type: 'bar',
         data: {
             labels: ['Ajudas Totais', 'Spider-Ajuda', 'Spider-Bot'],
             datasets: [{
                 label: 'Ajudas Necessárias',
-                data: [5, 2, 3],
+                data: [],
                 backgroundColor: [
                     '#D9E2E7',
                     '#a71814',
@@ -273,4 +233,5 @@
         }, 2800)
 
     }
+
 </script>
