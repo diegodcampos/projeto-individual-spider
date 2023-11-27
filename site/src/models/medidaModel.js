@@ -58,9 +58,20 @@ function selectAjudas(idUsuario) {
     return database.executar(instrucaoSql);
 }
 
+function selectTitulos(idUsuario) {
+
+    instrucaoSql = `select idCrime as id, tituloCrime as listaCrimes 
+    from CadastroCrimes
+    where fkUsuario = ${idUsuario};`;
+
+    console.log("Executando a instrução SQL: \n" + instrucaoSql);
+    return database.executar(instrucaoSql);
+}
+
 
 module.exports = {
     buscarUltimasMedidas,
     selectCrimes,
-    selectAjudas
+    selectAjudas,
+    selectTitulos
 }

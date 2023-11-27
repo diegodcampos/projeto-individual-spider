@@ -11,7 +11,7 @@
 </head>
 
 <body onload="obterDadosGrafico(sessionStorage.ID_USUARIO); 
-    obterDadosGraficoAjuda(sessionStorage.ID_USUARIO)">
+    obterDadosGraficoAjuda(sessionStorage.ID_USUARIO), obterCrimes(sessionStorage.ID_USUARIO)">
 
     <header>
         <ul>
@@ -89,9 +89,9 @@
 
                         <img class="iconeMiles3" src="../assets/milesIcon.png" width="45px">
 
-                        <div class="colunaCrimes">
+                        <div id="listaTitulos" class="colunaCrimes">
 
-                            <p>O homem-areia está a solta pela cidade
+                            <!-- <p>O homem-areia está a solta pela cidade
                                 <img src="../assets/check.png" width="18px">
                             </p> <br>
                             <p>O homem-areia está a solta pela cidade
@@ -114,7 +114,7 @@
                             </p> <br>
                             <p>O homem-areia está a solta pela cidade
                                 <img src="../assets/check.png" width="18px">
-                            </p>
+                            </p> -->
 
                         </div>
 
@@ -141,7 +141,7 @@
                 response.json().then(function (resposta) {
                     console.log(`Dados recebidos: ${JSON.stringify(resposta)}`);
                     chartCrimes.data.datasets[0].data = [resposta[0].crimesAbertos] +
-                    [resposta[0].crimesFechados]
+                        [resposta[0].crimesFechados]
                     chartCrimes.update()
                     totalCrimes.innerHTML = resposta[0].qtdCrimes
                 });
@@ -179,9 +179,8 @@
             if (response.ok) {
                 response.json().then(function (resposta) {
                     console.log(`Dados recebidos: ${JSON.stringify(resposta)}`);
-                    chartAjudas.data.datasets[0].data = [resposta[0].totalAjudas] 
-                    + [resposta[0].ajudaBot] + [resposta[0].ajudaSpider]
-                    // + [resposta[0].totalAjudasSoma] Para adicionar o outro item do chart!!! 
+                    chartAjudas.data.datasets[0].data = [resposta[0].totalAjudas]
+                        + [resposta[0].ajudaBot] + [resposta[0].ajudaSpider]
                     chartAjudas.update()
                 });
             } else {
@@ -223,6 +222,25 @@
             }
         }
     });
+
+    function obterCrimes(idUsuario) {
+
+        fetch(`/medidas/listaCrimes/${idUsuario}`, { cache: 'no-store' }).then(function (response) {
+            if (response.ok) {
+                response.json().then(function (resposta) {
+                    console.log(`Dados recebidos: ${JSON.stringify(resposta)}`);
+                    for (contador = 0; contador < resposta.length; contador += 1) {
+                        listaTitulos.innerHTML += resposta[contador].listaCrimes + `<br>` + `<br>`;
+                    }
+                });
+            } else {
+                console.error('Nenhum dado encontrado ou erro na API');
+            }
+        })
+            .catch(function (error) {
+                console.error(`Erro na obtenção dos dados p/ gráfico: ${error.message}`);
+            });
+    }
 
     function sairPerfil() {
 

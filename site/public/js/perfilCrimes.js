@@ -134,7 +134,7 @@ function registroSolucao() {
                             imgCheckDir.style.display = "none"
                         }, 4000);
 
-                    }, 2800)
+                    }, 2000)
 
                 } else {
 
