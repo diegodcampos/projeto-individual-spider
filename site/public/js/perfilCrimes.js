@@ -156,6 +156,7 @@ function sairPerfil() {
     loading.style.display = "block"
 
     setTimeout(function () {
-        location.href = '../public/index.html'
+        sessionStorage.clear()
+        location.href = '../index.html'
     }, 2800)
 }
