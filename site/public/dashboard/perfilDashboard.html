@@ -140,7 +140,8 @@
             if (response.ok) {
                 response.json().then(function (resposta) {
                     console.log(`Dados recebidos: ${JSON.stringify(resposta)}`);
-                    chartCrimes.data.datasets[0].data = [resposta[0].qtdCrimes]
+                    chartCrimes.data.datasets[0].data = [resposta[0].crimesAbertos] +
+                    [resposta[0].crimesFechados]
                     chartCrimes.update()
                     totalCrimes.innerHTML = resposta[0].qtdCrimes
                 });
@@ -178,7 +179,8 @@
             if (response.ok) {
                 response.json().then(function (resposta) {
                     console.log(`Dados recebidos: ${JSON.stringify(resposta)}`);
-                    chartAjudas.data.datasets[0].data = [resposta[0].totalAjudas]
+                    chartAjudas.data.datasets[0].data = [resposta[0].totalAjudas] 
+                    + [resposta[0].ajudaBot] + [resposta[0].ajudaSpider]
                     // + [resposta[0].totalAjudasSoma] Para adicionar o outro item do chart!!! 
                     chartAjudas.update()
                 });

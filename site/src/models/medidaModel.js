@@ -34,7 +34,10 @@ function buscarUltimasMedidas(idAquario, limite_linhas) {
 function selectCrimes(idUsuario) {
 
     instrucaoSql = `select 
-    count(idCrime) as qtdCrimes from CadastroCrimes 
+    count(idCrime) as qtdCrimes,
+    sum(statusCrime = 0) as crimesAbertos,
+    sum(statusCrime = 1) as crimesFechados
+    from CadastroCrimes 
     where fkUsuario = ${idUsuario};`;
 
     console.log("Executando a instrução SQL: \n" + instrucaoSql);
@@ -44,7 +47,9 @@ function selectCrimes(idUsuario) {
 function selectAjudas(idUsuario) {
 
     instrucaoSql = `select 
-    sum(spiderBot = 1) + sum(spiderAjuda = 1) AS totalAjudas 
+    sum(spiderBot = 1) + sum(spiderAjuda = 1) as totalAjudas,
+    sum(spiderBot = 1) as ajudaBot,
+    sum(spiderAjuda = 1) as ajudaSpider
     from CadastroCrimes
     join ResolucaoCrimes ON idCrime = fkCrime
     where fkUsuario = ${idUsuario};`;
