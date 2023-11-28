@@ -25,6 +25,7 @@
     <div class="feedSection">
 
         <div class="sideNav">
+            
             <div class="itensDiv">
                 <ul>
                     <a href="../perfilFeed.html">Feed</a> <br> <br>
@@ -58,7 +59,8 @@
                     <img class="joiaPeter" src="../assets/peterLogin.gif" width="110px">
 
                     <p style="color: white; font-size: 22px;">Número de crimes:
-                        <span style="color: #d3231d; font-size: 30px;"><b id="totalCrimes">9</b></span>.
+                        <span style="color: #d3231d; font-size: 30px;">
+                            <b id="totalCrimes">9</b></span>.
                     </p>
 
                 </div>
@@ -91,31 +93,6 @@
 
                         <div id="listaTitulos" class="colunaCrimes">
 
-                            <!-- <p>O homem-areia está a solta pela cidade
-                                <img src="../assets/check.png" width="18px">
-                            </p> <br>
-                            <p>O homem-areia está a solta pela cidade
-                                <img src="../assets/check.png" width="18px">
-                            </p> <br>
-                            <p>O homem-areia está a solta pela cidade
-                                <img src="../assets/check.png" width="18px">
-                            </p> <br>
-                            <p>O homem-areia está a solta pela cidade
-                                <img src="../assets/check.png" width="18px">
-                            </p> <br>
-                            <p>O homem-areia está a solta pela cidade
-                                <img src="../assets/check.png" width="18px">
-                            </p> <br>
-                            <p>O homem-areia está a solta pela cidade
-                                <img src="../assets/check.png" width="18px">
-                            </p> <br>
-                            <p>O homem-areia está a solta pela cidade
-                                <img src="../assets/check.png" width="18px">
-                            </p> <br>
-                            <p>O homem-areia está a solta pela cidade
-                                <img src="../assets/check.png" width="18px">
-                            </p> -->
-
                         </div>
 
                     </div>
@@ -137,6 +114,7 @@
     function obterDadosGrafico(idUsuario) {
 
         fetch(`/medidas/graficoCrimes/${idUsuario}`, { cache: 'no-store' }).then(function (response) {
+
             if (response.ok) {
                 response.json().then(function (resposta) {
                     console.log(`Dados recebidos: ${JSON.stringify(resposta)}`);
@@ -145,13 +123,16 @@
                     chartCrimes.update()
                     totalCrimes.innerHTML = resposta[0].qtdCrimes
                 });
+
             } else {
                 console.error('Nenhum dado encontrado ou erro na API');
             }
+
         })
             .catch(function (error) {
                 console.error(`Erro na obtenção dos dados p/ gráfico: ${error.message}`);
             });
+
     }
 
     let cadastrados = document.getElementById('cadastroPizza');
@@ -176,20 +157,25 @@
     function obterDadosGraficoAjuda(idUsuario) {
 
         fetch(`/medidas/graficoAjudas/${idUsuario}`, { cache: 'no-store' }).then(function (response) {
+
             if (response.ok) {
                 response.json().then(function (resposta) {
                     console.log(`Dados recebidos: ${JSON.stringify(resposta)}`);
                     chartAjudas.data.datasets[0].data = [resposta[0].totalAjudas]
                         + [resposta[0].ajudaBot] + [resposta[0].ajudaSpider]
                     chartAjudas.update()
+
                 });
+
             } else {
                 console.error('Nenhum dado encontrado ou erro na API');
             }
+
         })
             .catch(function (error) {
                 console.error(`Erro na obtenção dos dados p/ gráfico: ${error.message}`);
             });
+
     }
 
     let ajudas = document.getElementById('lineHelp');
@@ -226,20 +212,29 @@
     function obterCrimes(idUsuario) {
 
         fetch(`/medidas/listaCrimes/${idUsuario}`, { cache: 'no-store' }).then(function (response) {
+
             if (response.ok) {
                 response.json().then(function (resposta) {
                     console.log(`Dados recebidos: ${JSON.stringify(resposta)}`);
+
                     for (contador = 0; contador < resposta.length; contador += 1) {
-                        listaTitulos.innerHTML += resposta[contador].listaCrimes + `<br>` + `<br>`;
+                        listaTitulos.innerHTML += resposta[contador].listaCrimes +
+                            `<img class="checkFoto" 
+                        src="../assets/check.png" width="18px">` + `<br>` + `<br>`;
                     }
+
                 });
+
             } else {
                 console.error('Nenhum dado encontrado ou erro na API');
             }
+
         })
+
             .catch(function (error) {
                 console.error(`Erro na obtenção dos dados p/ gráfico: ${error.message}`);
             });
+
     }
 
     function sairPerfil() {
