@@ -68,7 +68,6 @@ function selectTitulos(idUsuario) {
     return database.executar(instrucaoSql);
 }
 
-
 module.exports = {
     buscarUltimasMedidas,
     selectCrimes,

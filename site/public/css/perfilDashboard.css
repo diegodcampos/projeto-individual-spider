@@ -265,8 +265,11 @@ li {
     font-size: 14px;
 }
 
-.atualizarCrimes .checkFoto {
-    margin-left: 2%;
+.atualizarCrimes .botaoAtualizar {
+    position: absolute;
+    margin-left: 28%;
+    margin-top: 2.3%;
+    width: 65px;
     cursor: pointer;
 }
 

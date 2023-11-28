@@ -3,8 +3,6 @@ function registroOcorrencia() {
     var dtCrime = dataCrime.value
     var ajudaBot = Number(spiderBot.value)
     var idUsuario = Number(sessionStorage.ID_USUARIO);
-    // var idUsuario = 1;
-    // var idUsuario = Number(sessionStorage.ID_USUARIO);
 
     if (nomeCrime.length <= 0 || dtCrime.length <= 0 || ajudaBot == 0) {
 

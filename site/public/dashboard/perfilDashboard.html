@@ -10,8 +10,9 @@
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 </head>
 
-<body onload="obterDadosGrafico(sessionStorage.ID_USUARIO); 
-    obterDadosGraficoAjuda(sessionStorage.ID_USUARIO), obterCrimes(sessionStorage.ID_USUARIO)">
+<body onload="obterDadosGrafico(sessionStorage.ID_USUARIO), 
+    obterDadosGraficoAjuda(sessionStorage.ID_USUARIO), 
+    obterCrimes(sessionStorage.ID_USUARIO)">
 
     <header>
         <ul>
@@ -25,7 +26,7 @@
     <div class="feedSection">
 
         <div class="sideNav">
-            
+
             <div class="itensDiv">
                 <ul>
                     <a href="../perfilFeed.html">Feed</a> <br> <br>
@@ -92,6 +93,9 @@
                         <img class="iconeMiles3" src="../assets/milesIcon.png" width="45px">
 
                         <div id="listaTitulos" class="colunaCrimes">
+
+                            <img onclick="updateCrimes()" class="botaoAtualizar" src="../assets/check.png"
+                                alt="Atualizar para resolvido">
 
                         </div>
 
@@ -162,7 +166,7 @@
                 response.json().then(function (resposta) {
                     console.log(`Dados recebidos: ${JSON.stringify(resposta)}`);
                     chartAjudas.data.datasets[0].data = [resposta[0].totalAjudas]
-                        + [resposta[0].ajudaBot] + [resposta[0].ajudaSpider]
+                        + [resposta[0].ajudaSpider] + [resposta[0].ajudaBot]
                     chartAjudas.update()
 
                 });
@@ -218,9 +222,8 @@
                     console.log(`Dados recebidos: ${JSON.stringify(resposta)}`);
 
                     for (contador = 0; contador < resposta.length; contador += 1) {
-                        listaTitulos.innerHTML += resposta[contador].listaCrimes +
-                            `<img class="checkFoto" 
-                        src="../assets/check.png" width="18px">` + `<br>` + `<br>`;
+                        listaTitulos.innerHTML += resposta[contador].listaCrimes
+                            + `<br>` + `<br>`;
                     }
 
                 });
@@ -233,6 +236,31 @@
 
             .catch(function (error) {
                 console.error(`Erro na obtenção dos dados p/ gráfico: ${error.message}`);
+            });
+
+    }
+
+    function updateCrimes() {
+
+        fetch("/usuarios/updateCrimes", {
+            method: "POST",
+            headers: {
+                "Content-Type": "application/json",
+            }
+        })
+            .then(function (resposta) {
+                console.log("resposta: ", resposta);
+
+                if (resposta.ok) {
+
+                    chartCrimes.update()
+                    alert("Crime resolvido!")
+
+                }
+
+            })
+            .catch(function (resposta) {
+                console.log(`#ERRO: ${resposta}`);
             });
 
     }
