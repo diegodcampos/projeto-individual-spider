@@ -144,6 +144,13 @@ li {
     margin-top: 28%;
 }
 
+.leftContainer .balaoResolvido {
+    display: none;
+    position: absolute;
+    margin-top: 7%;
+    margin-left: 36%;
+}
+
 .leftContainer p {
     margin-left: -50%;
 }

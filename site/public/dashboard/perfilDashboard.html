@@ -59,6 +59,9 @@
 
                     <img class="joiaPeter" src="../assets/peterLogin.gif" width="110px">
 
+                    <img id="balaoAtualizar" class="balaoResolvido" src="../assets/balaoFalaResolvido.png"
+                        width="175px">
+
                     <p style="color: white; font-size: 22px;">Número de crimes:
                         <span style="color: #d3231d; font-size: 30px;">
                             <b id="totalCrimes">9</b></span>.
@@ -207,7 +210,7 @@
             scales: {
                 y: {
                     min: 0,
-                    max: 15,
+                    max: 25,
                 }
             }
         }
@@ -253,8 +256,13 @@
 
                 if (resposta.ok) {
 
-                    chartCrimes.update()
-                    alert("Crime resolvido!")
+                    setTimeout(function () {
+                        balaoAtualizar.style.display = "block";
+                    }, 0);
+
+                    setTimeout(function () {
+                        window.location.reload();
+                    }, 3500);
 
                 }
 
@@ -276,5 +284,10 @@
         }, 2800)
 
     }
+
+//  Limpar a coluna inteira da tabela
+//  UPDATE nome_da_tabela
+// SET nome_da_coluna = NULL;
+
 
 </script>
