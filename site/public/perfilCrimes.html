@@ -16,7 +16,8 @@
         <ul>
             <div><img src="../assets/peterIcon.png " width="120px"></div>
             <li>
-                <p><b>Pronto para salvar a vizinhança hoje?</b></p>
+                <p><b>Temos um Easter Egg nesta pagina!
+                        <span style="color: #d3231d;">Procure!</span></b></p>
             </li>
         </ul>
     </header>
@@ -80,7 +81,7 @@
                         <label for="comoResolver">Como resolver?</label>
                         <input class="descricao" id="comoResolver" placeholder="Possível solução">
                     </div>
-                    
+
                     <div class="campoTexto">
                         <label for="ajudaAranha">Spider-Ajuda?</label>
                         <select id="ajudaAranha">
@@ -96,12 +97,14 @@
 
                     <img id="imgCheckDir" class="checkCerto" src="../assets/check.png">
 
+                    <dialog id="dialogTexto"></dialog>
+
                     <p id="pPeter" class="textoHiPeter">
                         <b>Formulário preenchido <span style="color: #d3231d;">
                                 incorretamente!</span></b>
                     </p>
 
-                    <div class="hiPeter"><img src="../assets/hiPeter.png" width="250px"></div>
+                    <div class="hiPeter"><img onclick="easterEgg()" src="../assets/hiPeter.png" width="250px"></div>
 
                 </div>
 

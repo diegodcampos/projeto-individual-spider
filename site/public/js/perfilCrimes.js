@@ -149,6 +149,31 @@ function registroSolucao() {
     }
 }
 
+
+
+function easterEgg() {
+
+    var somaBilheteria = Number(1131927996 + 1054431855 + 894983373)
+
+    var modal = document.querySelector("dialog")
+
+    var listaFilmes = ['Homem-Aranha: Longe de Casa (2019)',
+        'Homem-Aranha: Sem Volta Para Casa (2021)', 'Homem-Aranha 3 (2007)']
+
+    modal.showModal()
+
+    dialogTexto.innerHTML = ''
+
+    for (contador = 0; contador < listaFilmes.length; contador++) {
+        dialogTexto.innerHTML += listaFilmes[contador] + '<br>'
+    }
+
+    dialogTexto.innerHTML += `<h1>Parabéns! Vejo que seu sentido aranha está ótimo!</h1>
+    <h2>Sabia que as maiores bilheterias de filmes do homem-aranha são essas?</h2> <br> Aqui está a soma em dólares, destes três filmes: <b>${somaBilheteria}</b> <br>
+    Mais de três BILHÕES DE DÓLARES! O cabeça de teia arrasa nos cinemas!`
+
+}
+
 function sairPerfil() {
     var loadingDiv = document.getElementById("loading");
     loading.style.display = "block"
