@@ -104,11 +104,6 @@ function registroOcorrencia(req, res) {
             .then(
                 function (resultado) {
                     res.json(resultado);
-
-                    // res.json({
-                    //     crime: resultado[0].idCrime
-                    // });
-
                 }
             ).catch(
                 function (erro) {

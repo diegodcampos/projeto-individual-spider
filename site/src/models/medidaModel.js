@@ -60,7 +60,7 @@ function selectAjudas(idUsuario) {
 
 function selectTitulos(idUsuario) {
 
-    instrucaoSql = `select idCrime as id, tituloCrime as listaCrimes 
+    instrucaoSql = `select tituloCrime as listaCrimes 
     from CadastroCrimes
     where fkUsuario = ${idUsuario};`;
 

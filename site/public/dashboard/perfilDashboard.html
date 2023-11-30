@@ -38,7 +38,9 @@
                         <img id="loading" src="../assets/loading.gif">
                     </div>
                 </ul>
+
             </div>
+
         </div>
 
         <div class="feedContent">
@@ -91,14 +93,14 @@
                                 <b> Atualizar </span> crimes </b>
                         </h1>
 
-                        <p class="dicaCrimes">(Clique no check caso <br> tenha sido resolvido)</p>
+                        <p class="dicaCrimes">(Clique no check para <br> resolver o(s) crime(s))
+                        </p>
 
-                        <img class="iconeMiles3" src="../assets/milesIcon.png" width="45px">
+                        <img class="iconeMiles3" src="../assets/milesIcon.png" width="45px">x
 
                         <div id="listaTitulos" class="colunaCrimes">
 
-                            <img onclick="updateCrimes()" class="botaoAtualizar" src="../assets/check.png"
-                                alt="Atualizar para resolvido">
+                            <img onclick="updateCrimes()" class="botaoAtualizar" src="../assets/check.png">
 
                         </div>
 
@@ -210,7 +212,7 @@
             scales: {
                 y: {
                     min: 0,
-                    max: 25,
+                    max: 20,
                 }
             }
         }
@@ -227,6 +229,7 @@
                     for (contador = 0; contador < resposta.length; contador += 1) {
                         listaTitulos.innerHTML += resposta[contador].listaCrimes
                             + `<br>` + `<br>`;
+
                     }
 
                 });
@@ -284,10 +287,5 @@
         }, 2800)
 
     }
-
-//  Limpar a coluna inteira da tabela
-//  UPDATE nome_da_tabela
-// SET nome_da_coluna = NULL;
-
 
 </script>

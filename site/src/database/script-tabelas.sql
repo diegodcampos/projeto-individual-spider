@@ -1,5 +1,6 @@
 create database projetoSpider;
 use projetoSpider;
+drop tables Usuario, CadastroCrimes, ResolucaoCrimes;
 
 create table Usuario (
 idUsuario int primary key auto_increment,
@@ -28,3 +29,27 @@ references CadastroCrimes(idCrime));
 select * from Usuario;
 select * from CadastroCrimes;
 select * from ResolucaoCrimes;
+
+select 
+count(idCrime) as qtdCrimes,
+sum(statusCrime = 0) as crimesAbertos,
+sum(statusCrime = 1) as crimesFechados
+from CadastroCrimes 
+where fkUsuario = 1;
+
+select 
+sum(spiderBot = 1) + sum(spiderAjuda = 1) as totalAjudas,
+sum(spiderBot = 1) as ajudaBot,
+sum(spiderAjuda = 1) as ajudaSpider
+from CadastroCrimes
+join ResolucaoCrimes ON idCrime = fkCrime
+where fkUsuario = 1;
+
+select idCrime as id, tituloCrime as listaCrimes from CadastroCrimes
+where fkUsuario = 1;
+
+update CadastroCrimes set statusCrime = 1
+where fkUsuario = 1;
+
+update CadastroCrimes
+    set tituloCrime = null;
